@@ -23,6 +23,15 @@
 
 #     return values[n]
 
+# Четвертое по поулярности
+def main(n):
+    return (
+        0.74 if n == 0 else
+        -0.92 if n == 1 else
+        1 + main(n - 2) ** 4 + main(n - 1)
+    )
+print(main(2))  # Выведет значение для n = 10
+
 # Пятое по популярности
 # def main(n):
 #     return (
