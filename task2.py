@@ -2,20 +2,20 @@
 # from math import floor, tan
 
 
-def main(z):
-    if z < -30:
-        z = pow((36 * pow(z, 2) - z - (pow(z, 3) / 89)), 6)
-    elif z >= -30 and z < 22:
-        z = pow(floor(z), 5)
-    elif z >= 22 and z < 64:    
-        z1 = (15 * pow((z - (18 * pow(z, 3)) - (74 * pow(z, 2))), 4))
-        z2 = 1 + pow(((z/33) + 55), 2)
-        z = z1 + z2
-    elif z >= 64 and z < 125:
-        z = 32 * tan(z) - 1
-    elif z >= 125:
-        z = pow(z, 3) + 0.02
-    return z
+# def main(z):
+#     if z < -30:
+#         z = pow((36 * pow(z, 2) - z - (pow(z, 3) / 89)), 6)
+#     elif z >= -30 and z < 22:
+#         z = pow(floor(z), 5)
+#     elif z >= 22 and z < 64:    
+#         z1 = (15 * pow((z - (18 * pow(z, 3)) - (74 * pow(z, 2))), 4))
+#         z2 = 1 + pow(((z/33) + 55), 2)
+#         z = z1 + z2
+#     elif z >= 64 and z < 125:
+#         z = 32 * tan(z) - 1
+#     elif z >= 125:
+#         z = pow(z, 3) + 0.02
+#     return z
 
 # print(main(40))
 
