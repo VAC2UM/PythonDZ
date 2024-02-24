@@ -24,19 +24,19 @@
 #     return values[n]
 
 # Четвертое по поулярности
-import math 
+# import math 
 
 
-def main(n):
-    sign = n
-    match sign:
-        case 0:
-            return 0.74
-        case 1:
-            return -0.92
-    return 1 + main(n - 2) ** 4 + main(n - 1)
+# def main(n):
+#     sign = n
+#     match sign:
+#         case 0:
+#             return 0.74
+#         case 1:
+#             return -0.92
+#     return 1 + main(n - 2) ** 4 + main(n - 1)
 
-print(main(2))  # Выведет значение для n = 10
+# print(main(2))
 
 # Пятое по популярности
 # def main(n):
