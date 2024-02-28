@@ -16,6 +16,19 @@
 # print(main([0.7, -0.25, -0.01], [-0.7, -0.81, -0.63]))
 # ответ 2085404586.062392
 
+# Второе по поулярности
+# import math
+#
+#
+# def main(x, y):
+#     n = len(x)
+#     y.insert(0, 0)
+#     x.insert(0, 0)
+#     return 35 * sum(
+#         ((71 * pow(y[n + 1 - math.ceil(i / 4)], 2) -
+#           50 * pow(x[math.ceil(i / 3)], 3)) ** 7)
+#         for i in range(1, n + 1)
+#     )
 
 
 # Третье по популярнотси
