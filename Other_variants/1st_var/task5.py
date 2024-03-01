@@ -5,7 +5,7 @@ def main(z, x):
     x.insert(0, 0)
     summa = 0
     for i in range(1, n + 1):
-        summa += (55 * (z[i] + z[i] ** 3
+        summa += (51 * (z[i] + z[i] ** 3
         + 24 * x[i] ** 2) ** 6)
     return 88 * summa
 
