@@ -3,10 +3,9 @@ import math
 
 
 def calc(A):
-    n = len(A)
-    answ = []
-    for alph in range(1, n + 1):
-        answ.append(alph % 3)
+    answ = 1
+    for alph in A:
+        answ *= alph % 3
     return answ
 
 def main(input_set):
@@ -14,12 +13,13 @@ def main(input_set):
     K = {v for v in input_set if 72 > v > -36}
 
     # вычисляем B
-    B = {abs(v) for v in input_set if -52 < v < 99999999999999999999}
+    B = {abs(v) for v in input_set if -52 < v < 1e9}
 
     # вычисляем A
     A = {b ** 3 - math.floor(k / 5) for b in B for k in K if b > k}
 
-    answ = len({(a, b) for a in K for b in A}) + math.prod(calc(A))
+    # answ = len({(a, b) for a in K for b in A}) + calc(A)
+    answ = len(a * b for a in K for b in A) + calc(A)
 
     return answ
 
