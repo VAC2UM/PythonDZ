@@ -35,6 +35,7 @@
 #     else:
 #         return calculate_sum_recursive(z, x, i + 1, n, acc + (51 * (z[i] + z[i] ** 3 + 24 * x[i] ** 2) ** 6))
 
+# Пятое по популярности
 # def main(z, x):
 #     n = len(z)
 #     z.insert(0, 0)
