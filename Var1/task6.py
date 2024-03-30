@@ -1,13 +1,13 @@
 def main(P):
     A = {(p % 3 - 4 * p) for p in P if not (-1e9 < p < -25)}
 
-    I = {pow(p, 3) for p in P if (p >= 31 and p <= 60)}
+    I = {pow(p, 3) for p in P if (p >= -31 and p <= 60)}
 
     M = I.union(A)
 
     X = {abs(a) + y for a in A for y in M if (a < y)}
 
-    answ = len(M) - sum(y - 3 * x for y in M for x in X)
+    answ = len(M) - sum((y - 3 * x) for y in M for x in X)
 
     return answ
 
