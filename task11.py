@@ -1,3 +1,5 @@
+# Самое популярное решение
+# --------------------------------------
 class MealyError(Exception):
     def __init__(self, message):
         super().__init__(message)
@@ -63,42 +65,40 @@ def test():
     except MealyError:
         pass
     o.link()  # 0
+    o.snap()  # 3
+    o.spawn()  # 2
     try:
         o.link()  # MealyError
     except MealyError:
         pass
-    o.snap()  # 3
-    o.spawn()  # 2
     o.snap()  # 4
     o.spawn()  # 6
     o.snap()  # 7
     o.snap()  # 10
-    o.spawn()  # 9
+    o.link()  # 8
+    o.link()  # 11
     try:
-        o.link()  # MealyError
+        o.snap()  # MealyError
     except MealyError:
         pass
-    o.spawn()  # 2
-    o.spawn()  # 5
-    o.link()  # 11
+
+    o = main()
+    o.snap()  # 1
 
     o = main()
     o.link()  # 0
-    o.spawn()  # 2
-    o.snap()  # 4
-    o.spawn()  # 6
-    try:
-        o.link()  # MealyError
-    except MealyError:
-        pass
-    o.snap()  # 7
-    o.snap()  # 10
-    o.snap()  # 10
-    o.spawn()  # 9
     o.snap()  # 3
     o.spawn()  # 2
     o.spawn()  # 5
-    o.link()  # 11
+
+    o = main()
+    o.link()  # 0
+    o.snap()  # 3
+    o.spawn()  # 2
+    o.snap()  # 4
+    o.spawn()  # 6
+    o.snap()  # 7
+    o.spawn()  # 9
 
 
 def main():
@@ -106,3 +106,4 @@ def main():
 
 
 test()
+# --------------------------------------
