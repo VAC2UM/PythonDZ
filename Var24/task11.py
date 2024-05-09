@@ -42,43 +42,38 @@ class Mealy:
             return 6
         if self.state == 'C':
             self.state = 'E'
+            return 5
         else:
             raise MealyError('add')
 
 
 def test():
     o = main()
+    o.stare()  # 0
     try:
-        o.erase()  # MealyError
+        o.stare()  # MealyError
     except MealyError:
         pass
-    o.stare()  # 0
     try:
         o.add()  # MealyError
     except MealyError:
         pass
     o.erase()  # 2
     o.add()  # 5
-    try:
-        o.stare()  # MealyError
-    except MealyError:
-        pass
-    o.erase()  # 7
-
-    o = main()
-    o.add()  # 1
-
-    o = main()
-    o.stare()  # 0
-    o.erase()  # 2
-    o.stare()  # 3
-    o.add()  # 6
     o.stare()  # 8
-
-    o = main()
-    o.stare()  # 0
     o.erase()  # 2
     o.erase()  # 4
+    o.add()  # 1
+    o.add()  # 6
+    o.stare()  # 8
+    o.erase()  # 2
+    o.stare()  # 3
+    try:
+        o.erase()  # MealyError
+    except MealyError:
+        pass
+    o.add()  # 6
+    o.erase()  # 7
 
 
 def main():

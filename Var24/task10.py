@@ -28,6 +28,8 @@ def main(tablet1):
     remove_first_seven(tablet)
     move_text_after_symbol(tablet)
     tablet = remove_after_at(tablet)
+    for row in tablet:
+        row[0] = row[0].capitalize()
     tablet = [list(row) for row in zip(*tablet)]
     return tablet
 

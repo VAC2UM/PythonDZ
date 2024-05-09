@@ -13,6 +13,7 @@ def main(y, x, z):
         right = 38 * y[n + 1 - math.ceil(i / 3)] ** 2
 
         summa += 2 * math.cos(left - mid - right) ** 7
+    summa *= 85
     return summa
 
 
